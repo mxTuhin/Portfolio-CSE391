@@ -8,7 +8,6 @@ body {
   font-family: "Josefin Sans", "Roboto", sans-serif;
   background-color: #212529;
   color: rgba(255, 255, 255, 0.75);
-  overflow: hidden;
 }
 
 a {
@@ -259,3 +258,43 @@ svg {
     font-size: 1.2em;
     background-color: rgba(40, 45, 50, 0.8);
  }
+
+ .content{
+     width: 80%;
+     margin-top: 1 em;
+     margin-left: 16em;
+     font-size: 18px;
+     display: block;
+ }
+
+ /* Image Flexing Container */
+ 
+.custom-container {
+    width: 100%;
+    height: 21vw;
+    margin-bottom: 30px;
+    margin-top: 80px;
+  }
+  
+  .right-container {
+    float:right; 
+    width:50%;
+  }
+  
+  .left-container {
+    float:left; 
+    width:50%;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 80px;
+  }
+  
+  .right-content {
+    width: 100%;
+    height: 21vw;
+  }
+  
+  .left-content {
+    max-width: 70%;
+  }
+ 
