@@ -9,37 +9,28 @@ var fortune_quotes = ["Lets not worry. Its too late now. It will always be too l
 
 document.getElementById("fortune_text").innerText = fortune_quotes[Math.floor(Math.random()*fortune_quotes.length)];
 
+var box = document.getElementById("fortune_box");
+var text = document.getElementById("fortune_text");
 function fortune_buttons(btn_color){
-    var box = document.getElementById("fortune_box");
-    var text = document.getElementById("fortune_text");
+    
     if(btn_color=="green"){
-        box.style.backgroundColor = "#4CAF50";
-        box.style.border="3px solid #DA0037";
-        text.style.color = "#233E8B";
-        text.style.fontFamily = "Times New Roman";
-        text.style.fontSize = "16px";
+        changeProps("#4CAF50", "3px solid #DA0037", "#233E8B", "Times New Roman", "16px");
     }
     else if(btn_color=="blue"){
-        box.style.backgroundColor = "#008CBA";
-        box.style.border="3px solid #4CAF50";
-        text.style.color = "#FFBD9B";
-        text.style.fontFamily = "Calibri";
-        text.style.fontSize = "18px";
-
+        changeProps("#008CBA", "3px solid #4CAF50", "#FFBD9B", "Calibri", "18px");
     }
     else if(btn_color=="red"){
-        box.style.backgroundColor = "#DA0037";
-        box.style.border="3px solid #FFC107";
-        text.style.color = "white";
-        text.style.fontFamily = "Josefin Sans";
-        text.style.fontSize = "20px";
+        changeProps("#DA0037", "3px solid #FFC107", "white", "Josefin Sans", "20px");
+    }
+    else if(btn_color=="gray"){
+        changeProps("#E7E7E7", "3px solid #DA0037", "black", "Roboto", "22px");
+    }
+}
 
-    }
-    else if(btn_color=="new_color"){
-        box.style.backgroundColor = "#E7E7E7";
-        box.style.border="3px solid #DA0037";
-        text.style.color = "black";
-        text.style.fontFamily = "Calibri";
-        text.style.fontSize = "22px";
-    }
+function changeProps(bColor, boColor, fColor, family, fSize){
+        box.style.backgroundColor = bColor;
+        box.style.border=boColor;
+        text.style.color = fColor;
+        text.style.fontFamily = family;
+        text.style.fontSize = fSize;
 }
