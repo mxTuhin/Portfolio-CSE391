@@ -89,3 +89,10 @@ function calculate(){
     }
     
 }
+
+function magicBox(command){
+    var enText=document.getElementById("enTextarea");
+    if(command=="clear"){
+        enText.value = "";
+    }
+}
