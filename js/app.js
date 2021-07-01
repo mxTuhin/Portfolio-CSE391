@@ -86,6 +86,7 @@ function calculate(){
         document.getElementById("min").innerText = "0.00";
         document.getElementById("sum").innerText = "0.00";
         document.getElementById("avg").innerText = "0.00";
+        document.getElementById("rev").innerText = "0.00";
     }
     
 }
@@ -94,5 +95,52 @@ function magicBox(command){
     var enText=document.getElementById("enTextarea");
     if(command=="clear"){
         enText.value = "";
+    }
+    else if(command=="capitalize"){
+        enText.value = enText.value.toUpperCase();
+    }else if(command=="sort"){
+        var sortedText=(enText.value.split("\n")).sort();
+        enText.value="";
+        for(var i=0; i<sortedText.length; ++i){
+            
+            enText.value += sortedText[i]+"\n";
+        }
+    }else if(command=="reverse"){
+        var revS=(enText.value.split('\n')).reverse();
+        enText.value="";
+        for(var i=0; i<revS.length; ++i){            
+            enText.value += revS[i]+"\n";
+        }
+    }else if(command=="strip"){
+        var text=enText.value.split("\n");
+        for(var i=0; i<text.length; ++i){
+            if(text[i]==""){
+                console.log(i);
+                text.splice(i,1);
+                i--;
+            }
+        }
+        console.log(text);
+        enText.value = "";
+        for(var i=0; i<text.length; ++i){
+            enText.value += text[i]+"\n";
+        }
+        
+    }else if(command=="addNum"){
+        var text=enText.value.split("\n");
+        enText.value="";
+        for(var i=0; i<text.length; ++i){
+            enText.value += text[i]+" "+(i+1)+"\n";
+        }
+    }else if(command=="shuffle"){
+        var text=enText.value.split("\n");
+        for(let i=text.length-1; i>0; --i){
+            const j=Math.floor(Math.random()*(i+1));
+            [text[i], text[j]] = [text[j], text[i]];
+        }
+        enText.value = "";
+        for(var i=0; i<text.length; ++i){
+            enText.value += text[i]+"\n";
+        }
     }
 }
