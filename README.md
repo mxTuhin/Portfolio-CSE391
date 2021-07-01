@@ -11,7 +11,7 @@ Important Links<br>
 Favorite Movies<br>
 Projects<br>
 Page Information<br><br>
-Web Page Live At: http://mxtuhin.ninja/cse391/assignment/01/
+Web Page Live At: http://mxtuhin.ninja/cse391/assignment/01/<br>
 <br>
 <b>Version 1.0.1</b>
 <br>Upgrades<br>

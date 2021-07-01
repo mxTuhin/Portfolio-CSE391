@@ -34,3 +34,58 @@ function changeProps(bColor, boColor, fColor, family, fSize){
         text.style.fontFamily = family;
         text.style.fontSize = fSize;
 }
+
+function convert(){
+    var enValue= document.getElementById("enValue");
+    var selector = document.getElementById("selector");
+    if(selector.value=="ns"){
+        alert("Please Select an option");
+    }else{
+        if(selector.value=="kg"){
+            document.getElementById("enV").innerText=parseInt(enValue.value)+" Pounds"; 
+            document.getElementById("cnV").innerText=parseInt(enValue.value)*0.4536+" Kilograms"; 
+        }
+        else if(selector.value=="lb"){
+            document.getElementById("enV").innerText=parseInt(enValue.value)+" Kilograms"; 
+            document.getElementById("cnV").innerText=parseInt(enValue.value)*2.2046+" Pounds"; 
+        }
+    }
+    
+}
+
+function calculate(){
+    var enSeries=document.getElementById("enSeries");
+    var series = enSeries.value.split(",");
+    var intSeries=[];
+    for(var i=0; i<series.length; ++i){
+        if(!series[i]==""){
+            intSeries[i]=parseInt(series[i]);
+        }
+        
+    }
+    if(intSeries.length>0){
+        document.getElementById("max").innerText = Math.max.apply(Math, intSeries);
+        document.getElementById("min").innerText = Math.min.apply(Math, intSeries);
+        var sum=0;
+        for(var i=0; i<intSeries.length; ++i){
+            sum+=intSeries[i];
+        }
+        document.getElementById("sum").innerText = sum;
+        document.getElementById("avg").innerText = (sum/intSeries.length).toFixed(2);
+        var revS="";
+        for(var i=intSeries.length-1; i>=0; --i){
+            
+            revS=revS.concat(intSeries[i])+",";
+        }
+        console.log(revS);
+        document.getElementById("rev").innerText = revS.slice(0,-1);
+        
+        
+    }else{
+        document.getElementById("max").innerText = "0.00";
+        document.getElementById("min").innerText = "0.00";
+        document.getElementById("sum").innerText = "0.00";
+        document.getElementById("avg").innerText = "0.00";
+    }
+    
+}
