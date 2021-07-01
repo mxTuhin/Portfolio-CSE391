@@ -17,3 +17,5 @@ Web Page Live At: http://mxtuhin.ninja/cse391/assignment/01/<br>
 <br>Upgrades<br>
 Fortune Quotes<br>
 Hero Converter<br>
+Max Sum Min Average<br>
+Magic Box<br>
