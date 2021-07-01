@@ -1,6 +1,6 @@
 Portfolio Website with Pure HTML CSS for CSE 391 Assignments
 <br>
-Version 1.00<br>
+<b>Version 1.00</b><br>
 One Page Template<br>
 Contains:<br>
 Short Overview<br>
