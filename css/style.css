@@ -11,7 +11,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: white;
   text-decoration: none;
   outline: none;
 }
@@ -358,6 +358,6 @@ table {
 
  
   tr:nth-child(even) {
-    background-color: #f4f6fb;
+    background-color: #282D32;
   }
  
